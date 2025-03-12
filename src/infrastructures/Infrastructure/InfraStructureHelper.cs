@@ -12,7 +12,7 @@ public  class InfraStructureHelper
 
         parentDir = parentDir.Parent;
 
-        string infrastructureProjectName = "03.Infrastructures\\Infrastructure";
+        string infrastructureProjectName = "infrastructures\\Infrastructure";
 
         var infrastructureDirectory = parentDir + "\\" + infrastructureProjectName;
 
