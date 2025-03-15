@@ -1,6 +1,6 @@
 ﻿namespace Common.Interfaces;
 
-public interface IUnitOfWork
+public interface IUnitOfWork:IScope
 {
     Task Begin();
     Task Commit();

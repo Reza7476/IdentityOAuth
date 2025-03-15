@@ -1,12 +1,18 @@
-using Infrastructure;
+﻿using Infrastructure;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Presentation.Configurations;
 using Presentation.Configurations.AutoFacts;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddJWTServices(builder.Configuration);
 builder.Host.AddAutoFact();
+
 var isDev = builder.Environment.IsDevelopment();
 string? infrastructureDirectory;
 
