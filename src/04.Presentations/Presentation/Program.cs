@@ -1,9 +1,7 @@
 ﻿using Infrastructure;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using Presentation.Configurations;
 using Presentation.Configurations.AutoFacts;
-using System.Text;
+using Presentation.Configurations.JwtConfigs;
+using Presentation.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,7 +38,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.UseMiddleware<ErrorHandlingMiddleware>();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();

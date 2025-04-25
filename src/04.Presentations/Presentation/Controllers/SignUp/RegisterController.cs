@@ -1,9 +1,9 @@
-﻿using Application.Services.Users.Contracts.Dtos;
-using Application.Services.Users.Contracts;
+﻿using Application.Services.Users.Contracts;
+using Application.Services.Users.Contracts.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using Presentation.Models;
 
-namespace Presentation.Controllers.SignUp.Register
+namespace Presentation.Controllers.SignUp
 {
     public class RegisterController : Controller
     {
@@ -16,12 +16,13 @@ namespace Presentation.Controllers.SignUp.Register
 
         public IActionResult Register()
         {
-            return View();  
+            return View();
         }
-        
+
         [HttpPost]
-        public async Task <IActionResult> Register(RegisterUserDto dto )
+        public async Task<IActionResult> Register([FromBody] RegisterUserDto dto)
         {
+
             var user = new AddUserDto()
             {
                 CreateDate = DateTime.Now,
@@ -33,9 +34,8 @@ namespace Presentation.Controllers.SignUp.Register
                 UserName = dto.UserName,
             };
 
-            await  _userService.Register(user);
+            await _userService.Register(user);
             return View();
         }
-
     }
 }

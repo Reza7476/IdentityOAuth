@@ -69,7 +69,9 @@ public class AutoFacModule : Module
          .AsImplementedInterfaces()
          .InstancePerLifetimeScope();
 
-        container.RegisterAssemblyTypes(applicationAssembly)
+        container.RegisterAssemblyTypes(
+            applicationAssembly,
+            presentationAssembly)
         .AssignableTo<IService>()
         .AsImplementedInterfaces()
         .InstancePerLifetimeScope();

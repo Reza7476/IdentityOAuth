@@ -2,7 +2,8 @@
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
-namespace Presentation.Configurations;
+
+namespace Presentation.Configurations.JwtConfigs;
 
 public static class JwtConfiguration
 {
@@ -41,3 +42,4 @@ public static class JwtConfiguration
         return services;
     }
 }
+
