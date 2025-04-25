@@ -1,8 +1,200 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = null;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title> ثبت نام </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="~/Layouts/assets/images/favicon.ico">
+
+    <!-- plugin css -->
+    <link href="~/Layouts/assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
+
+    <!-- preloader css -->
+    <link rel="stylesheet" href="~/Layouts/assets/css/preloader.min.css" type="text/css" />
+
+    <!-- Bootstrap Css -->
+    <link href="~/Layouts/assets/css/bootstrap-rtl.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="~/Layouts/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="~/Layouts/assets/css/app-rtl.min.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        font-face {
+            font-family: "iransans";
+            src: url("../Layouts/style/fonts/IRANSansWeb_Light.woff2") format("woff2");
+            src: url("../Layouts/style/fonts/IRANSansWeb_Light.woff") format("woff");
+        }
+
+        body {
+            font-family: iransans;
+        }
+    </style>
+
+</head>
+
+<body style="background-image: url(../Layouts/assets/images/bg.jpg)">
+
+    <!-- <body data-layout="horizontal"> -->
+    <!-- Begin page -->
+    <div>
+
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <!-- end page title -->
+                    <div class="main-wrapper">
+                        <div class="page-wrapper full-page">
+                            <div class="page-content d-flex align-items-center justify-content-center">
+
+                                <div class="row w-100 mx-0 auth-page">
+                                    <div class="col-md-12 col-xl-6 mx-auto">
+                                        <div class="card">
+                                            <div class="row">
+                                                <div class="col-md-12 ps-md-0">
+                                                    <div class="auth-form-wrapper px-4 py-5">
+                                                        <h5 class="text-muted fw-normal mb-4">یک حساب کاربری ایجاد کنید</h5>
+                                                        <form id="submitForm" class="forms-sample">
+
+                                                            <div class="mb-3">
+                                                                <label for="FirstName" class="form-label">نام</label>
+                                                                <input type="text" class="form-control" id="FirstName" placeholder="نام ">
+                                                            </div>
+
+                                                            <div class="mb-3">
+                                                                <label for="LastName" class="form-label">نام خانوادگی</label>
+                                                                <input type="text" class="form-control" id="LastName" placeholder="نام خانوادگی">
+                                                            </div>
+
+                                                            <div class="mb-3">
+                                                                <label for="Mobile" class="form-label">شماره تلفن</label>
+                                                                <input type="text" class="form-control" id="Mobile" placeholder="شماره تلفن">
+                                                            </div>
+
+                                                            <div class="mb-3">
+                                                                <label for="UserName" class="form-label">نام کاربری</label>
+                                                                <input type="text" class="form-control" id="UserName" placeholder="نام کاربری">
+                                                            </div>
+
+                                                            <div class="mb-3">
+                                                                <label for="Password" class="form-label">پسوورد</label>
+                                                                <input type="password" class="form-control" id="Password" autocomplete="current-password" placeholder="پسوورد" />
+
+                                                            </div>
+
+                                                            <div class="mb-3">
+                                                                <label for="Email" class="form-label">ایمیل</label>
+                                                                <input type="text" class="form-control" id="Email" placeholder="ایمیل">
+                                                            </div>
+
+                                                            <div>
+                                                                <button  type="submit" class="btn btn-primary text-white me-2 mb-2 mb-md-0">ورود</button>
+                                                            </div>
+                                                            <a href="Login/login" class="d-block mt-3 text-muted">حساب کاربری دارید؟ورود</a>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                </div>
+                <!-- container-fluid -->
+            </div>
+        </div>
+        <!-- end main content-->
+    </div>
+    <!-- END layout-wrapper -->
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
+
+    <!-- JAVASCRIPT -->
+    <script src="~/Layouts/assets/libs/jquery/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="~/Layouts/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Layouts/assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="~/Layouts/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="~/Layouts/assets/libs/node-waves/waves.min.js"></script>
+    <script src="~/Layouts/assets/libs/feather-icons/feather.min.js"></script>
+    <!-- pace js -->
+    <script src="~/Layouts/assets/libs/pace-js/pace.min.js"></script>
+
+    <!-- apexcharts -->
+    <script src="~/Layouts/assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Plugins js-->
+    <script src="~/Layouts/assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="~/Layouts/assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
+    <!-- dashboard init -->
+    <script src="~/Layouts/assets/js/pages/dashboard.init.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="~/Layouts/assets/js/app.js"></script>
+
+
+
+
+    <script>
+        $(() => {
+
+            $("#submitForm").submit(function (event) {
+                event.preventDefault();
+                let dto = {
+                    firstName: $("#FirstName").val(),
+                    lastName: $("#LastName").val(),
+                    mobile: $("#Mobile").val(),
+                    userName: $("#UserName").val(),
+                    password: $("#Password").val(),
+                    email: $("#Email").val()
+                };
+                
+                $.ajax({
+                     url: "Register/Register",
+                     type: "POST",
+                     contentType: "application/json",
+                    data: JSON.stringify(dto),
+                    success: function (response) {
+                        Swal.fire({
+                            icon: response.success ? "success" : "error",
+                            title: response.message
+                        });
+
+                        if (response.success) {
+                            $("#submitForm")[0].reset(); // پاک کردن فرم در صورت موفقیت
+                        }
+                    },
+
+                    error: function (xhr) {
+
+                        Swal.fire({
+                            icon: "error",
+                            title: "خطا!",
+                            text: xhr.responseText
+                        });
+                    }
+                });
+            })
+        })
+
+    </script>
+
+</body>
+
+</html>
